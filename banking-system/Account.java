@@ -14,4 +14,9 @@ public abstract class Account {
     public abstract void withdraw(double amount);
     public String getAccountNumber() { return accountNumber; }
     public double getBalance() { return balance; }
+
+    public void calculateInterest() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'calculateInterest'");
+    }
 }
