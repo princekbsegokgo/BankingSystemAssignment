@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="controller.MainController">
+  <tabs>
+    <Tab text="Customer Registration">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox layoutX="8.0" layoutY="8.0" prefHeight="358.0" prefWidth="586.0">
+                     <children>
+                        <Label text="First Name" />
+                        <TextField fx:id="txtFirstName" />
+                        <Label text="Last Name" />
+                        <TextField fx:id="txtLastName" />
+                        <Label text="Address" />
+                        <TextField fx:id="txtAddress" />
+                        <Label text="Customer ID" />
+                        <TextField fx:id="txtCustomerId" />
+                        <Button mnemonicParsing="false" onAction="#handleRegisterCustomer" text="Button" />
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Open Account">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox layoutX="8.0" layoutY="6.0" prefHeight="363.0" prefWidth="590.0">
+                     <children>
+                        <Label text="Account Number" />
+                        <TextField fx:id="txtAccountNumber" />
+                        <Label text="Initial Deposit" />
+                        <TextField fx:id="txtDeposit" />
+                        <Label text="Branch" />
+                        <TextField fx:id="txtBranch" />
+                        <Label text="Account Type" />
+                        <ComboBox prefWidth="150.0" />
+                        <Button mnemonicParsing="false" onAction="#handleOpenAccount" text="Open Account" />
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Deposit/Withdraw">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="371.0" prefWidth="594.0">
+                     <children>
+                        <Label text="Account Number" />
+                        <TextField fx:id="txtTransAccount" />
+                        <Label text="Amount" />
+                        <TextField fx:id="txtAmount" />
+                        <Button mnemonicParsing="false" onAction="#handleDeposit" text="Deposit" />
+                        <Button mnemonicParsing="false" onAction="#handleWithdraw" text="Withdraw" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="View Accounts">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox layoutY="8.0" prefHeight="362.0" prefWidth="600.0">
+                     <children>
+                        <TableView fx:id="tblAccounts" prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn prefWidth="197.5999755859375" text="Account Number" />
+                            <TableColumn minWidth="6.4000244140625" prefWidth="289.5999755859375" text="Balance, Type" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>

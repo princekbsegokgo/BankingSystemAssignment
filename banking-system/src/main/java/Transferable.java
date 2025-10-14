@@ -1,4 +1,4 @@
 public interface Transferable {
-    void transfer(double amount, Account targetAccount);
+    void transfer(Account from, Account to, double amount);
     double getTransferLimit();
 }
